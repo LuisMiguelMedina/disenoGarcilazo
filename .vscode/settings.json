@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": [
+        "Diseno_CSV/src",
+        "DisenoT2/src",
+        "demo/src/main/java/com/example"
+    ]
+}
