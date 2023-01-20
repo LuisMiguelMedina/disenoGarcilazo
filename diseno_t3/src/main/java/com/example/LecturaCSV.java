@@ -43,6 +43,25 @@ public class LecturaCSV {
         }
         System.out.println(cont);
 
+        String elementos[][] = new String[espacio][cont];
+
+        for (int i = 0; i < elementos.length; i++) {
+            for (int j = 0; j < elementos[i].length; j++) {
+                System.out.println("Estado");
+                auxS = teclado.readLine();
+                elementos[i][j] = auxS;
+                System.out.println("Elemento");
+                auxS = teclado.readLine();
+                elementos[i][j] = auxS;
+            }
+        }
+        for( int x = 0; x<elementos.length;x++) {
+            for( int z = 0; z<elementos.length;z++) {
+                System.out.println("Estado "+elementos[x][z]);
+                System.out.println("Elemento "+elementos[z][z]);
+            }
+        }
+
     }
 }
 
