@@ -7,10 +7,32 @@ public class Alumnos {
     private String nombres = null;
     private Calificacion calificacion = new Calificacion();
 
-    public Alumnos(int Matricula, String Paterno, String Materno, String Nombres){
-        matricula = Matricula;
-        apellido_P = Paterno;
-        apellido_M = Materno;
-        nombres = Nombres;
+    public Alumnos(String[] Datos){
+        matricula = Integer.parseInt(Datos[0]);
+        apellido_P = Datos[1];
+        apellido_M = Datos[2];
+        nombres = Datos[3];
     }
+
+    
+
+    public Calificacion getCalificacion() {
+        return calificacion;
+    }
+
+
+
+    public void setCalificacion(Calificacion calificacion) {
+        this.calificacion = calificacion;
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "Alumnos [matricula=" + matricula + ", apellido_P=" + apellido_P + ", apellido_M=" + apellido_M
+                + ", nombres=" + nombres + ", calificacion=" + calificacion + "]";
+    }
+
+    
 }

@@ -7,6 +7,9 @@ public class Calificacion {
     public Calificacion(){
 
     }
+    public Calificacion(int cali){
+        calificacion = cali;
+    }
 
     public String getMateria() {
         return materia;

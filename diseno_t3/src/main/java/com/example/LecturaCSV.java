@@ -3,68 +3,107 @@ package com.example;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import com.example.Alumnos;
 
 public class LecturaCSV {
 
     private String path = null;
+    private String [][] List_Alum = null;
 
     public LecturaCSV(){
         path = null;
+    }
 
+    public LecturaCSV(String Path){
+        path = Path;
     }
 
 
-    public  boolean leerArchivo(String Path) throws FileNotFoundException{
-        File file = new File(Path);
-        path = Path;
-        datos(file);
+    public  boolean leerArchivo() throws FileNotFoundException{
+        File file = new File(this.path);
+        if (file.canRead())
+            datos();
+
         return file.canRead();
     }
 
     public  String[][] recuperarDatos(){
-
-        return null;
-        
+        return List_Alum;
     }
 
-    private void datos(File archivo) throws FileNotFoundException{
-        //Columnas 
+    private void datos() throws FileNotFoundException{
+        int filas = contar_filas();
+        int datosxFila = contar_Datos();
+        AsignarDatos(contar_filas(),contar_Datos());
+    }
+
+    
+    private int contar_Datos(){
         File file = new File(path);
-        Scanner scanner = new Scanner(file);
-        String[] columna = scanner.nextLine().split(",");
-        int espacio = columna.length;
-        System.out.println(espacio);
-
-        //Filas
-        int cont = 0;
-        while(scanner.hasNextLine()){
-            String line = scanner.nextLine();
-            cont = cont + 1;
+        Scanner scanner;
+        int cont_Datosxfila = 0;
+        try {
+            scanner = new Scanner(file);
+            String[] divisor = scanner.nextLine().split(",");
+            cont_Datosxfila = divisor.length;
+            //System.out.println(cont_Datosxfila);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            cont_Datosxfila = 0;
         }
-        System.out.println(cont);
 
-        String elementos[][] = new String[espacio][cont];
+        return cont_Datosxfila;
 
-        for (int i = 0; i < elementos.length; i++) {
-            for (int j = 0; j < elementos[i].length; j++) {
-                System.out.println("Estado");
-                auxS = teclado.readLine();
-                elementos[i][j] = auxS;
-                System.out.println("Elemento");
-                auxS = teclado.readLine();
-                elementos[i][j] = auxS;
+    }
+
+
+    private int contar_filas(){
+        File file = new File(path);
+        Scanner scanner;
+        int filas = 0;
+        try {
+            scanner = new Scanner(file);
+            while(scanner.hasNextLine()){
+                String line = scanner.nextLine();
+                filas = filas + 1;
+                //System.out.println(filas);
+            }
+    
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            filas = 0;
+        }
+
+        return filas;
+    }
+
+
+    private  void AsignarDatos(int filas, int datosxFila) throws FileNotFoundException{
+        File file = new File(path);
+        Scanner scanner;
+        scanner = new Scanner(file);
+        scanner.nextLine();
+
+        List_Alum = new String[filas][datosxFila];
+
+        for (int i = 0; i < List_Alum.length-1; i++) {
+            String[] divisor = scanner.nextLine().split(",");
+            for (int j = 0; j < List_Alum[i].length; j++) {
+                List_Alum[i][j] = divisor[j];
             }
         }
-        for( int x = 0; x<elementos.length;x++) {
-            for( int z = 0; z<elementos.length;z++) {
-                System.out.println("Estado "+elementos[x][z]);
-                System.out.println("Elemento "+elementos[z][z]);
+
+
+    }
+
+
+    public void recorer(){
+        for( int x = 0; x<List_Alum.length-1;x++) {
+            for( int z = 0; z<List_Alum[x].length;z++) {
+                System.out.println(List_Alum[x][z]);
             }
         }
 
     }
-}
 
-/*
- *         
- */
+} // Final de la clase
