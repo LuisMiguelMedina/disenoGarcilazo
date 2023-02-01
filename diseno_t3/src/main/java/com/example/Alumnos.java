@@ -15,6 +15,35 @@ public class Alumnos {
     }
 
     
+    
+
+    public int getMatricula() {
+        return matricula;
+    }
+
+
+
+
+    public String getApellido_P() {
+        return apellido_P;
+    }
+
+
+
+
+    public String getApellido_M() {
+        return apellido_M;
+    }
+
+
+
+
+    public String getNombres() {
+        return nombres;
+    }
+
+
+
 
     public Calificacion getCalificacion() {
         return calificacion;
@@ -33,6 +62,5 @@ public class Alumnos {
         return "Alumnos [matricula=" + matricula + ", apellido_P=" + apellido_P + ", apellido_M=" + apellido_M
                 + ", nombres=" + nombres + ", calificacion=" + calificacion + "]";
     }
-
     
 }

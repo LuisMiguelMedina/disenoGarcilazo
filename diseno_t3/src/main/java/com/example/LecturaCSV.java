@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import com.example.Alumnos;
 
-public class LecturaCSV {
+public class LecturaCSV extends Lector{
 
     private String path = null;
     private String [][] List_Alum = null;
@@ -95,6 +95,8 @@ public class LecturaCSV {
 
 
     }
+
+    
 
 
     public void recorer(){
