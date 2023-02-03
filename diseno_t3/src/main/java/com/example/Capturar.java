@@ -47,22 +47,23 @@ public class Capturar {
         try {
             fr = new FileReader (Usuarios);
             BufferedReader br = new BufferedReader(fr);
-            String linea = br.readLine();
-            System.out.println(linea);
-            System.out.println(encriptador.encrypt(usuario, contrasena));
+            String linea = null;
 
-            if(Objects.equals(linea, encriptador.encrypt(usuario, contrasena))){
-                System.out.println("Usuario validado");
-
-                validez = true;
-            }else{
-                System.out.println("Vuelve a intentarlo");
+            while((linea=br.readLine())!=null){
+                String[] line = linea.split(",");
+                if(Objects.equals(line[1], encriptador.encrypt(usuario, contrasena))){
+                    System.out.println("Usuario validado");
+    
+                    validez = true;
+                }
+            }
+            if(!validez){
+                System.out.println("Usuario no validado");
             }
 
             br.close();
             fr.close();
-
-        } catch (Exception e) {
+        }catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -70,6 +71,60 @@ public class Capturar {
         return validez;
 
     }
+
+
+    public void encriptar(){
+        FileReader fr;
+        try {
+            fr = new FileReader (Usuarios);
+            BufferedReader br = new BufferedReader(fr);
+
+            
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Nuevo usuario");
+            String linea = scan.next();
+
+            Scanner scan2 = new Scanner(System.in);
+            System.out.println("Contrasena");
+            String linea2 = scan2.next();
+
+            escribir(encriptador.encrypt(linea,linea2));
+            br.close();
+            fr.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+    //Funcion para escribir en el archivo el texto encriptado
+    private void escribir(String encriptado){
+        FileWriter fichero = null;
+        BufferedWriter xd = null;
+        PrintWriter pw = null;
+        int x=0;
+        try
+        {
+            Scanner scan = new Scanner(Usuarios);
+            fichero = new FileWriter(Usuarios);
+            xd = new BufferedWriter(fichero);
+            pw = new PrintWriter(xd);
+
+            while(scan.hasNextLine()){
+                x = x+1;
+            }
+
+            pw.append(encriptado);
+
+            pw.close();
+            xd.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    } 
 
     public ArrayList<Alumnos> Registro() {
         ArrayList<Alumnos> alum = new ArrayList<>();

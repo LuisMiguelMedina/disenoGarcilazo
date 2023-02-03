@@ -4,10 +4,14 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 // Usuario: Garcilazo , Pass: 123
-public class App 
+public class App
 {
     public static void main(String [] args) throws FileNotFoundException {
-         
+        /*
+            Capturar je = new Capturar(null);
+            je.encriptar();
+         */
+
         Lector archivo = new LecturaCSV("diseno_t3/src/CSV/Alumnos.csv");
         if(archivo.leerArchivo()){//Revisar si la lectura fue exitosa
             ArrayList<Alumnos> alumno = CrearAlumnos(archivo.recuperarDatos()); //Creacion de los alumnos.
@@ -20,6 +24,7 @@ public class App
         }else{
             System.out.println("No se encontro el archivo");
         }
+
 
     }
 
