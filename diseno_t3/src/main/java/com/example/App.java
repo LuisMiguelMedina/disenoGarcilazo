@@ -10,7 +10,7 @@ public class App
         /*
             Capturar je = new Capturar(null);
             je.encriptar();
-         */
+        */
 
         Lector archivo = new LecturaCSV("diseno_t3/src/CSV/Alumnos.csv");
         if(archivo.leerArchivo()){//Revisar si la lectura fue exitosa
@@ -24,8 +24,6 @@ public class App
         }else{
             System.out.println("No se encontro el archivo");
         }
-
-
     }
 
     private static ArrayList<Alumnos> CrearAlumnos(String[][] Datos) {
