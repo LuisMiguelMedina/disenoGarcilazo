@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>disenoT2</artifactId>
+    <artifactId>DisenoSecuencias2</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -14,12 +14,4 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-
-  <dependencies>
-    <dependency>
-      <groupId>io.netty</groupId>
-      <artifactId>netty-all</artifactId>
-      <version>5.0.0.Alpha2</version>
-    </dependency>
-  </dependencies>
 </project>
