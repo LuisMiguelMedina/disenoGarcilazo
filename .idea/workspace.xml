@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6679f792-3619-493e-bb14-5254f970692b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/disenoGarcilazo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DisenoSecuencias/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DisenoSecuencias/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DisenoSecuencias/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DisenoSecuencias/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DisenoSecuencias/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DisenoSecuencias/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DisenoSecuencias/src/main/java/org/example/DisenoSecuencial1/FinancialAnalyst.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DisenoSecuencias/src/main/java/org/example/DisenoSecuencial1/ReportingSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DisenoSecuencias/src/main/java/org/example/DisenoSecuencial1/SecuritySystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/disenoSecuencial/.idea/disenoSecuencial.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/disenoT2/DisenoT2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/disenoT2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/disenoT2/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/disenoT2/src/CSV/Alumnos.csv" beforeDir="false" afterPath="$PROJECT_DIR$/disenoT2/src/CSV/Alumnos.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/disenoT2/src/CSV/Calificaciones.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/disenoT2/src/main/java/org/example/Alumno.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/disenoT2/src/main/java/org/example/Calificaciones.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/disenoT2/src/main/java/org/example/LecturaCSV.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/disenoT2/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/disenoT2/src/main/java/org/example/View.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/disenoT2/target/classes/org/example/Alumno.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/disenoT2/target/classes/org/example/Calificaciones.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/disenoT2/target/classes/org/example/LecturaCSV.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/disenoT2/target/classes/org/example/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/disenoT2/target/classes/org/example/View$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/disenoT2/target/classes/org/example/View.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DisenoSecuencias2/src/main/java/org/example/RegisterOffice.java" beforeDir="false" afterPath="$PROJECT_DIR$/DisenoSecuencias2/src/main/java/org/example/RegisterOffice.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +39,7 @@
       <updated>1679678782306</updated>
       <workItem from="1679678783651" duration="39000" />
       <workItem from="1679936079438" duration="37000" />
+      <workItem from="1680195052468" duration="64000" />
     </task>
     <servers />
   </component>
