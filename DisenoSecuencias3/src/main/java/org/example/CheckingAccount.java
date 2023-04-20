@@ -1,19 +1,8 @@
 package org.example;
 
 public class CheckingAccount {
+    double balance;
     public double getBalance(){
-        return 0.0;
-    }
-    public void addDebitTransaction(int checkNumber, double amount){
-
-    }
-    public void storePhotoOfCheck(Check theCheck){
-
-    }
-    public void addInsufficientFoundFree(){
-
-    }
-    public void noteReturnedCheck(Check theCheck){
-
+    return balance;
     }
 }
